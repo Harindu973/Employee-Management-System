@@ -21,5 +21,10 @@ namespace Employee_Management_System
         {
 
         }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
