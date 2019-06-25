@@ -25,11 +25,6 @@ namespace Employee_Management_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void PnlMove_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -42,6 +37,41 @@ namespace Employee_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string uname = txtUname.Text;
+            string pw = txtPw.Text;
+            bool Match;
+
+            if(uname == string.Empty || pw == string.Empty)
+            {
+                MessageBox.Show ( "Please check...  Something's Missing...!!!");
+                txtUname.Text = "";
+                txtPw.Text = "";
+            }
+            else
+            {
+                Encapsulation en = new Encapsulation();
+                en.setValues(uname,pw);
+                Match = en.getValues();
+
+                if (Match == false)
+                {
+                    MessageBox.Show("Wrong Username Or Password...!!!");
+                    txtUname.Text = "";
+                    txtPw.Text = "";
+                }
+                else
+                {
+                    Home home = new Home();
+                    this.Hide();
+                    home.Show();
+                    
+                }
+            }
+
         }
     }
 }
