@@ -16,5 +16,10 @@ namespace Employee_Management_System
         {
             InitializeComponent();
         }
+
+        private void pnlButton_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
