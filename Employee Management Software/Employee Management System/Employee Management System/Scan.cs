@@ -26,5 +26,20 @@ namespace Employee_Management_System
         {
 
         }
+
+        private void Scan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xuiWidgetPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
