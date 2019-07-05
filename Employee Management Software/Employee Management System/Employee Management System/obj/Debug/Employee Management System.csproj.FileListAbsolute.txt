@@ -24,3 +24,16 @@ C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management 
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\MaterialSkin.dll
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Home.resources
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Scan.resources
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\XanderUI.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.dll
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.xml
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.xml
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.pdb
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.xml
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.pdb
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.xml

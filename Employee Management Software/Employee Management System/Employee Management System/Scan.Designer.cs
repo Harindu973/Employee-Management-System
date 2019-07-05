@@ -28,57 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.pnlButton = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMain.SuspendLayout();
-            this.pnlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlMain.Controls.Add(this.pnlButton);
+            this.pnlMain.Controls.Add(this.pictureBox1);
+            this.pnlMain.Controls.Add(this.label1);
+            this.pnlMain.Controls.Add(this.button1);
+            this.pnlMain.Controls.Add(this.comboBox1);
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(799, 453);
+            this.pnlMain.Size = new System.Drawing.Size(799, 519);
             this.pnlMain.TabIndex = 0;
             this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
-            // pnlButton
+            // comboBox1
             // 
-            this.pnlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.pnlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlButton.Controls.Add(this.pictureBox1);
-            this.pnlButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlButton.Location = new System.Drawing.Point(0, 0);
-            this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(218, 453);
-            this.pnlButton.TabIndex = 0;
-            this.pnlButton.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlButton_Paint);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(291, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 24);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(584, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(21, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 75);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 175);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(776, 431);
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 518);
             this.Controls.Add(this.pnlMain);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Scan";
             this.Text = "Scan";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Scan_FormClosing);
             this.Load += new System.EventHandler(this.Scan_Load);
             this.pnlMain.ResumeLayout(false);
-            this.pnlButton.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -87,7 +113,10 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel pnlButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
