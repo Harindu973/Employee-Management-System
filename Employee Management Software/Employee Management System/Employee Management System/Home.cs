@@ -19,7 +19,9 @@ namespace Employee_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Scan sc = new Scan();
+            this.Hide();
+            sc.Show();
         }
     }
 }

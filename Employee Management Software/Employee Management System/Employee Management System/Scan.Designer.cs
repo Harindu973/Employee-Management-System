@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.xuiButton1 = new XanderUI.XUIButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -52,22 +53,23 @@
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(403, 60);
+            this.comboBox1.Location = new System.Drawing.Point(663, 61);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(313, 24);
+            this.comboBox1.Size = new System.Drawing.Size(206, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.label1.Location = new System.Drawing.Point(740, 63);
+            this.label1.Location = new System.Drawing.Point(550, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 21);
+            this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Scaning Device";
+            this.label1.Text = "Scaning Device :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -83,6 +85,7 @@
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.pnlMain.Controls.Add(this.xuiButton1);
             this.pnlMain.Controls.Add(this.panel2);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pictureBox1);
@@ -146,6 +149,28 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // xuiButton1
+            // 
+            this.xuiButton1.BackgroundColor = System.Drawing.Color.Black;
+            this.xuiButton1.ButtonImage = ((System.Drawing.Image)(resources.GetObject("xuiButton1.ButtonImage")));
+            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.xuiButton1.ButtonText = "Home";
+            this.xuiButton1.ClickBackColor = System.Drawing.Color.Black;
+            this.xuiButton1.ClickTextColor = System.Drawing.Color.Black;
+            this.xuiButton1.CornerRadius = 5;
+            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
+            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.xuiButton1.Location = new System.Drawing.Point(738, 515);
+            this.xuiButton1.Name = "xuiButton1";
+            this.xuiButton1.Size = new System.Drawing.Size(122, 42);
+            this.xuiButton1.TabIndex = 7;
+            this.xuiButton1.TextColor = System.Drawing.Color.DarkGray;
+            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton1.Click += new System.EventHandler(this.xuiButton1_Click);
+            // 
             // Scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,5 +202,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
+        private XanderUI.XUIButton xuiButton1;
     }
 }

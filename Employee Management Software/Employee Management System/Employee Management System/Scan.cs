@@ -13,6 +13,7 @@ using AForge.Video.DirectShow;
 using ZXing;
 using ZXing.QrCode;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Employee_Management_System
 {
@@ -74,9 +75,13 @@ namespace Employee_Management_System
                     try
                     {
                         string dec = res.ToString().Trim();
-                        if (dec == "12345")
+                        if (dec != string.Empty)
                         {
-                            timer1.Stop(); MessageBox.Show(" Matching...!!! ");
+                            timer1.Stop(); MessageBox.Show(""+dec);
+                            Home hm = new Home();
+                            this.Hide();
+                            hm.Show();
+                            
                         }
                     }
                     catch (Exception ex)
@@ -118,7 +123,11 @@ namespace Employee_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
+    
             Application.Exit();
+            
+            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -133,6 +142,18 @@ namespace Employee_Management_System
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            Home hm = new Home();
+            this.Hide();
+            hm.Show();
         }
     }
 
