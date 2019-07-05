@@ -73,5 +73,15 @@ namespace Employee_Management_System
             }
 
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PnlMove_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

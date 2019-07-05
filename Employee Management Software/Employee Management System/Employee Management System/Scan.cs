@@ -12,11 +12,22 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
 using ZXing.QrCode;
+using System.Runtime.InteropServices;
 
 namespace Employee_Management_System
 {
     public partial class Scan : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+
+
         FilterInfoCollection capturedev;
         private VideoCaptureDevice finalframe;
 
@@ -42,7 +53,7 @@ namespace Employee_Management_System
             {
                 comboBox1.Items.Add(Dev.Name);
             }
-            comboBox1.SelectedIndex = -1;
+            comboBox1.SelectedIndex = 0;
         }
         private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -103,6 +114,25 @@ namespace Employee_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 

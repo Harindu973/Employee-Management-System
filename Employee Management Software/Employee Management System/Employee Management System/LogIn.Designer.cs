@@ -52,6 +52,7 @@
             this.PnlMove.Name = "PnlMove";
             this.PnlMove.Size = new System.Drawing.Size(304, 60);
             this.PnlMove.TabIndex = 3;
+            this.PnlMove.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlMove_Paint);
             this.PnlMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlMove_MouseDown);
             // 
             // button2
@@ -172,6 +173,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LogIn";
             this.Text = "Log In";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.PnlMove.ResumeLayout(false);
             this.PnlMove.PerformLayout();
             this.ResumeLayout(false);
