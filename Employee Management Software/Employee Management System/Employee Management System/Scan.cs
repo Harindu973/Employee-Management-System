@@ -63,7 +63,7 @@ namespace Employee_Management_System
                     try
                     {
                         string dec = res.ToString().Trim();
-                        if (dec == "Harindu")
+                        if (dec == "12345")
                         {
                             timer1.Stop(); MessageBox.Show(" Matching...!!! ");
                         }
@@ -98,6 +98,11 @@ namespace Employee_Management_System
                 {
                     finalframe.Stop();
                 }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
