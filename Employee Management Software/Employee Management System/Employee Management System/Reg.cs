@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace Employee_Management_System
 {
-    public partial class Home: Form
+    public partial class Reg : Form
     {
-        public Home()
+        public Reg()
         {
             InitializeComponent();
         }
 
+        private void Reg_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Scan sc = new Scan();
-            this.Hide();
-            sc.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Reg re = new Reg();
-            this.Hide();
-            re.Show();
 
         }
     }
