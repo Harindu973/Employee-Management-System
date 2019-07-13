@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Employee_Management_System
 {
     public partial class Reg : Form
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -38,14 +40,16 @@ namespace Employee_Management_System
             string Fname = txtFname.Text;
             string Lname = txtLname.Text;
             string Desig = txtDesig.Text;
+            string Nic = txtNic.Text;
             string Phone = txtPhone.Text;
             string Dob = txtDob.Text;
             string Add = txtAdd.Text;
             string Gender = txtGender.Text;
             //string Photo = picPhoto.Text;
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
-            string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "','')";
+
+           // SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+            string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Nic + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "','')";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             try
@@ -89,6 +93,20 @@ namespace Employee_Management_System
         private void saveFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        string imgLocation = "";
+        SqlCommand cmd;
+
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBox1.ImageLocation = imgLocation;
+            }
         }
     }
 }
