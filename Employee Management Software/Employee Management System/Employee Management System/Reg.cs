@@ -47,15 +47,26 @@ namespace Employee_Management_System
             string Gender = txtGender.Text;
             //string Photo = picPhoto.Text;
 
+            byte[] images = null;
+            FileStream Streem = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Streem);
+            images=brs.ReadBytes((int)Streem.Length);
 
-           // SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
-            string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Nic + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "','')";
+
+            // SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Nic + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "',@images )";
             SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.Add(new SqlParameter("@images", images));
+   
+
+            
 
             try
             {
-                conn.Open();
+               
                 cmd.ExecuteNonQuery();
+                conn.Close();  
                 MessageBox.Show("You are now Registerd...!!!");
             }
             catch (SqlException ex)
