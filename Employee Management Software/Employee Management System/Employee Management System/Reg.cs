@@ -42,7 +42,7 @@ namespace Employee_Management_System
             string Dob = txtDob.Text;
             string Add = txtAdd.Text;
             string Gender = txtGender.Text;
-            string Photo = picPhoto.Text;
+            //string Photo = picPhoto.Text;
 
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
             string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "','')";

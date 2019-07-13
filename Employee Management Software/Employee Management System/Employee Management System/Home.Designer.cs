@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.SuspendLayout();
             // 
             // button1
@@ -60,6 +61,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.ResumeLayout(false);
 
@@ -69,5 +71,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
     }
 }

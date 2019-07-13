@@ -41,20 +41,36 @@ namespace Employee_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PnlMove_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             string uname = txtUname.Text;
             string pw = txtPw.Text;
             bool Match;
 
-            if(uname == string.Empty || pw == string.Empty)
+            if (uname == string.Empty || pw == string.Empty)
             {
-                MessageBox.Show ( "Please check...  Something's Missing...!!!");
+                MessageBox.Show("Please check...  Something's Missing...!!!");
                 txtUname.Text = "";
                 txtPw.Text = "";
             }
             else
             {
                 Encapsulation en = new Encapsulation();
-                en.setValues(uname,pw);
+                en.setValues(uname, pw);
                 Match = en.getValues();
 
                 if (Match == false)
@@ -68,19 +84,9 @@ namespace Employee_Management_System
                     Home home = new Home();
                     this.Hide();
                     home.Show();
-                    
+
                 }
             }
-
-        }
-
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PnlMove_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

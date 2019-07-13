@@ -309,6 +309,7 @@
             this.Controls.Add(this.txtFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v fj";
             this.Load += new System.EventHandler(this.Reg_Load);
             this.PnlMove.ResumeLayout(false);
