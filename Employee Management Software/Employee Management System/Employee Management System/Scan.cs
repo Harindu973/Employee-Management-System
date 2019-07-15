@@ -70,18 +70,20 @@ namespace Employee_Management_System
             {
                 BarcodeReader red = new BarcodeReader();
                 if (pictureBox1.Image != null)
-                { // here decode the qr and do matching with our string “abobaker” every tick 
+                { 
                     Result res = red.Decode((Bitmap)pictureBox1.Image);
                     try
                     {
                         string dec = res.ToString().Trim();
                         if (dec != string.Empty)
                         {
-                            timer1.Stop(); MessageBox.Show(""+dec);
+                           // timer1.Stop();
+                            MessageBox.Show(""+dec);
+
                             Home hm = new Home();
                             this.Hide();
                             hm.Show();
-                            
+
                         }
                     }
                     catch (Exception ex)
