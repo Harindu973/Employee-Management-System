@@ -19,6 +19,8 @@ namespace Employee_Management_System
 {
     public partial class Scan : Form
     {
+        
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -77,12 +79,14 @@ namespace Employee_Management_System
                         string dec = res.ToString().Trim();
                         if (dec != string.Empty)
                         {
-                           // timer1.Stop();
-                            MessageBox.Show(""+dec);
+                             timer1.Stop();
 
-                            Home hm = new Home();
-                            this.Hide();
-                            hm.Show();
+                             MessageBox.Show("" + dec);
+
+                             Home hm = new Home();
+                             this.Hide();
+
+                             hm.Show();
 
                         }
                     }
@@ -90,6 +94,8 @@ namespace Employee_Management_System
                     {
                           
                     }
+ 
+
                 }
             }
         }
@@ -157,6 +163,8 @@ namespace Employee_Management_System
             this.Hide();
             hm.Show();
         }
+
+
     }
 
 

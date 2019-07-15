@@ -107,7 +107,7 @@ namespace Employee_Management_System
         }
 
         string imgLocation = "";
-        SqlCommand cmd;
+       // SqlCommand cmd;
 
         private void xuiButton1_Click(object sender, EventArgs e)
         {

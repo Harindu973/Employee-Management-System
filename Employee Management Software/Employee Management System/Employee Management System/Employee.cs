@@ -8,11 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using AForge;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
+using ZXing.QrCode;
 
 namespace Employee_Management_System
 {
     public partial class Employee : Form
     {
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
         public Employee()
         {
             InitializeComponent();
@@ -37,7 +44,7 @@ namespace Employee_Management_System
         {
             string key = txtSearch.Text;
 
-            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+            //SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
             //string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30";
             string qry = "SELECT * FROM Attendance where EMPID = '"+key+"' ";
             string qFname = "SELECT * FROM EMPDetails where EMP_ID = '" + key + "' ";
@@ -79,8 +86,37 @@ namespace Employee_Management_System
             DGV1.DataSource = ds.Tables["Attendance"];
 
 
+            //Image retrive
+           // con = new SqlConnection("Data Source=MCNDESKTOP03;Initial Catalog=pulkit;User ID=sa;Password=wintellect@123");
+            //con.Open();
+            cmd = new SqlCommand("SELECT * FROM EMPDetails where EMP_ID = '" + key + "' ", constring);
+            SqlDataAdapter daa = new SqlDataAdapter(cmd);
+            DataSet dss = new DataSet();
+            daa.Fill(dss);
+            if (dss.Tables[0].Rows.Count > 0)
+            {
+                MemoryStream ms = new MemoryStream((byte[])dss.Tables[0].Rows[0]["Photo"]);
+                pictureBox1.Image = new Bitmap(ms);
+            }
 
+            constring.Close();
+        }
 
+        private void Add_Click(object sender, EventArgs e)
+        {
+            Reg rg = new Reg();
+            this.Hide();
+            rg.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Scan sc = new Scan();
+            sc.Show();
+          
+            
+
+            
         }
     }
 }
