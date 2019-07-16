@@ -64,8 +64,8 @@ namespace Employee_Management_System
             if (uname == string.Empty || pw == string.Empty)
             {
                 MessageBox.Show("Please check...  Something's Missing...!!!");
-                txtUname.Text = "";
-                txtPw.Text = "";
+                //txtUname.Text = "";
+                //txtPw.Text = "";
             }
             else
             {

@@ -180,6 +180,7 @@
             this.txtPw.Name = "txtPw";
             this.txtPw.Size = new System.Drawing.Size(168, 22);
             this.txtPw.TabIndex = 10;
+            this.txtPw.UseSystemPasswordChar = true;
             // 
             // txtUname
             // 

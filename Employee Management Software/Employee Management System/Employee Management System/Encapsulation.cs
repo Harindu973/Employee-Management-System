@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Employee_Management_System
 {
     class Encapsulation
     {
-        private string Vname = "Harindu";
-        private string Vpw = "H123";
+
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+
+
+
         private string Pname;
         private string Ppw;
         private bool verify = false;
@@ -18,21 +22,31 @@ namespace Employee_Management_System
         {
             Pname = uname;
             Ppw = pw;
+            string qFname = "SELECT * FROM Admin where Username = '" +Pname+ "' AND Password = '"+Ppw+"' ";
+            SqlCommand cmd = new SqlCommand(qFname, constring);
 
+           
+            
+                constring.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                //reader.Read();
+
+                if (reader.Read())
+                {
+                    verify = true;
+                }
+                
+
+
+               // reader.Close();
+            
 
         }
 
         public bool getValues()
         {
-            if (Pname == Vname && Ppw == Vpw)
-            {
-                verify = true;
-                return verify;
-            }
-            else
-            {
-                return verify; 
-            }
+            return verify;
         }
 
         
