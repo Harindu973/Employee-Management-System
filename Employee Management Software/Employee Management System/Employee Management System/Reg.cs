@@ -44,8 +44,16 @@ namespace Employee_Management_System
             string Phone = txtPhone.Text;
             string Dob = txtDob.Text;
             string Add = txtAdd.Text;
-            string Gender = txtGender.Text;
-            //string Photo = picPhoto.Text;
+            string Gender;
+            if (RMale.Checked)
+            {
+                Gender = "Male";
+            }
+            else 
+            {
+                Gender = "Female";
+            }
+            
 
             byte[] images = null;
             FileStream Streem = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);

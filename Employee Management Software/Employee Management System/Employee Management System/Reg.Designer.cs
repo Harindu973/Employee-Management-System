@@ -43,11 +43,9 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDob = new System.Windows.Forms.TextBox();
             this.txtAdd = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.Gender = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,6 +53,9 @@
             this.xuiButton1 = new XanderUI.XUIButton();
             this.txtNic = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtDob = new System.Windows.Forms.DateTimePicker();
+            this.RMale = new XanderUI.XUIRadio();
+            this.RFemale = new XanderUI.XUIRadio();
             this.PnlMove.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -211,19 +212,12 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Phone No :";
             // 
-            // txtDob
-            // 
-            this.txtDob.Location = new System.Drawing.Point(202, 430);
-            this.txtDob.Name = "txtDob";
-            this.txtDob.Size = new System.Drawing.Size(236, 22);
-            this.txtDob.TabIndex = 4;
-            // 
             // txtAdd
             // 
-            this.txtAdd.Location = new System.Drawing.Point(202, 480);
+            this.txtAdd.Location = new System.Drawing.Point(202, 428);
             this.txtAdd.Multiline = true;
             this.txtAdd.Name = "txtAdd";
-            this.txtAdd.Size = new System.Drawing.Size(236, 65);
+            this.txtAdd.Size = new System.Drawing.Size(236, 70);
             this.txtAdd.TabIndex = 5;
             // 
             // label7
@@ -231,7 +225,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.label7.Location = new System.Drawing.Point(86, 431);
+            this.label7.Location = new System.Drawing.Point(86, 528);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 18);
             this.label7.TabIndex = 13;
@@ -242,18 +236,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.label8.Location = new System.Drawing.Point(86, 481);
+            this.label8.Location = new System.Drawing.Point(86, 429);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 14;
             this.label8.Text = "Address :";
-            // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(202, 571);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(236, 22);
-            this.txtGender.TabIndex = 6;
             // 
             // Gender
             // 
@@ -338,12 +325,48 @@
             this.label11.TabIndex = 11;
             this.label11.Text = "NIC :";
             // 
+            // txtDob
+            // 
+            this.txtDob.Location = new System.Drawing.Point(202, 523);
+            this.txtDob.Name = "txtDob";
+            this.txtDob.Size = new System.Drawing.Size(236, 22);
+            this.txtDob.TabIndex = 19;
+            // 
+            // RMale
+            // 
+            this.RMale.Checked = false;
+            this.RMale.ForeColor = System.Drawing.Color.White;
+            this.RMale.Location = new System.Drawing.Point(202, 573);
+            this.RMale.Name = "RMale";
+            this.RMale.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(250)))));
+            this.RMale.RadioHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
+            this.RMale.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.RMale.Size = new System.Drawing.Size(100, 16);
+            this.RMale.TabIndex = 20;
+            this.RMale.Text = "Male";
+            // 
+            // RFemale
+            // 
+            this.RFemale.Checked = false;
+            this.RFemale.ForeColor = System.Drawing.Color.White;
+            this.RFemale.Location = new System.Drawing.Point(276, 574);
+            this.RFemale.Name = "RFemale";
+            this.RFemale.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(250)))));
+            this.RFemale.RadioHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
+            this.RFemale.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.RFemale.Size = new System.Drawing.Size(100, 16);
+            this.RFemale.TabIndex = 20;
+            this.RFemale.Text = "Female";
+            // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(534, 781);
+            this.Controls.Add(this.RFemale);
+            this.Controls.Add(this.RMale);
+            this.Controls.Add(this.txtDob);
             this.Controls.Add(this.xuiButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PnlMove);
@@ -359,9 +382,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtAdd);
-            this.Controls.Add(this.txtDob);
             this.Controls.Add(this.txtNic);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtDesig);
@@ -396,11 +417,9 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDob;
         private System.Windows.Forms.TextBox txtAdd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.Label Gender;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -408,5 +427,8 @@
         private XanderUI.XUIButton xuiButton1;
         private System.Windows.Forms.TextBox txtNic;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker txtDob;
+        private XanderUI.XUIRadio RMale;
+        private XanderUI.XUIRadio RFemale;
     }
 }
