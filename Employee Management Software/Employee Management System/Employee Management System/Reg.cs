@@ -66,9 +66,10 @@ namespace Employee_Management_System
             string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Nic + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "',@images )";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.Add(new SqlParameter("@images", images));
-   
 
-            
+           
+
+
 
             try
             {

@@ -74,25 +74,66 @@ namespace Employee_Management_System
                 if (pictureBox1.Image != null)
                 { 
                     Result res = red.Decode((Bitmap)pictureBox1.Image);
+                    
                     try
                     {
                         string dec = res.ToString().Trim();
                         if (dec != string.Empty)
                         {
-                             timer1.Stop();
+                             //timer1.Stop();
 
-                             MessageBox.Show("" + dec);
+                            string QRval = dec;
+                             
+                            // MessageBox.Show("" + QRval);
 
-                             Home hm = new Home();
+                            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+
+                            string qry = "SELECT FirstName FROM EMPDetails where EMP_ID = '"+QRval+"' ";
+                            SqlCommand cmd = new SqlCommand(qry, constring);
+
+
+
+                            constring.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            //reader.Read();
+
+                            if (reader.Read())
+                            {
+                                var time = DateTime.Now;
+                                string name = reader["FirstName"].ToString();
+                                constring.Close();
+
+                                try
+                                {
+                                    constring.Open();
+                                    string attINqry = "INSERT INTO Attendance values('" + QRval + "','" + name + "','1','" + time + "','') ";
+                                    SqlCommand cmdattIN = new SqlCommand(attINqry, constring);
+                                    cmdattIN.ExecuteNonQuery();
+                                    constring.Close();
+
+                                    MessageBox.Show("Dear " + name + ",Your Attendance Is Marked...!!! Press Ok to Finish...");
+                                }
+                                catch(SqlException x)
+                                {
+                                    MessageBox.Show("" + x);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sorry...!!! You are Not a Employee of us..Try Again...!!!");
+                            }
+
+                           /* Home hm = new Home();
                              this.Hide();
 
-                             hm.Show();
+                             hm.Show();*/
 
                         }
                     }
                     catch (Exception ex)
                     {
-                          
+                        //MessageBox.Show("" + ex);
                     }
  
 

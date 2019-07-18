@@ -136,7 +136,7 @@
             // 
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV1.Location = new System.Drawing.Point(501, 74);
-            this.DGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4);
             this.DGV1.Name = "DGV1";
             this.DGV1.Size = new System.Drawing.Size(680, 379);
             this.DGV1.TabIndex = 19;
@@ -145,7 +145,7 @@
             // 
             this.txtLname.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLname.Location = new System.Drawing.Point(150, 209);
-            this.txtLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLname.Margin = new System.Windows.Forms.Padding(4);
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(192, 27);
             this.txtLname.TabIndex = 12;
@@ -154,7 +154,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(127, 46);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(132, 30);
             this.txtSearch.TabIndex = 0;
@@ -164,7 +164,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(150, 348);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(192, 27);
             this.txtPhone.TabIndex = 15;
@@ -185,7 +185,7 @@
             // 
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.Location = new System.Drawing.Point(272, 45);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(40, 38);
             this.btnSearch.TabIndex = 1;
@@ -196,7 +196,7 @@
             // 
             this.txtGender.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Location = new System.Drawing.Point(150, 534);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(132, 27);
             this.txtGender.TabIndex = 17;
@@ -205,7 +205,7 @@
             // 
             this.txtDesig.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesig.Location = new System.Drawing.Point(150, 256);
-            this.txtDesig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesig.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesig.Name = "txtDesig";
             this.txtDesig.Size = new System.Drawing.Size(192, 27);
             this.txtDesig.TabIndex = 13;
@@ -214,7 +214,7 @@
             // 
             this.Add.Image = ((System.Drawing.Image)(resources.GetObject("Add.Image")));
             this.Add.Location = new System.Drawing.Point(501, 491);
-            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(100, 57);
             this.Add.TabIndex = 20;
@@ -225,7 +225,7 @@
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(635, 491);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 57);
             this.button3.TabIndex = 21;
@@ -235,7 +235,7 @@
             // 
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(785, 491);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 57);
             this.button4.TabIndex = 22;
@@ -245,7 +245,7 @@
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(925, 491);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 57);
             this.button5.TabIndex = 23;
@@ -257,7 +257,7 @@
             // 
             this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
             this.Back.Location = new System.Drawing.Point(1095, 529);
-            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Back.Margin = new System.Windows.Forms.Padding(4);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(87, 52);
             this.Back.TabIndex = 24;
@@ -280,7 +280,7 @@
             // 
             this.txtNic.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNic.Location = new System.Drawing.Point(150, 302);
-            this.txtNic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNic.Margin = new System.Windows.Forms.Padding(4);
             this.txtNic.Name = "txtNic";
             this.txtNic.Size = new System.Drawing.Size(192, 27);
             this.txtNic.TabIndex = 14;
@@ -312,7 +312,7 @@
             // 
             this.txtFname.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFname.Location = new System.Drawing.Point(150, 162);
-            this.txtFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFname.Margin = new System.Windows.Forms.Padding(4);
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(192, 27);
             this.txtFname.TabIndex = 11;
@@ -395,7 +395,7 @@
             this.Controls.Add(this.lbladdress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employee";
             this.Text = "D.N.Weerathunga (Pvt) Ltd.";
             this.Load += new System.EventHandler(this.Employee_Load);
