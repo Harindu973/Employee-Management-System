@@ -56,6 +56,7 @@
             this.txtDob = new System.Windows.Forms.DateTimePicker();
             this.RMale = new XanderUI.XUIRadio();
             this.RFemale = new XanderUI.XUIRadio();
+            this.button3 = new System.Windows.Forms.Button();
             this.PnlMove.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -384,12 +385,31 @@
             this.RFemale.TabIndex = 20;
             this.RFemale.Text = "Female";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Gray;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(279, 578);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(37, 27);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(400, 635);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.RFemale);
             this.Controls.Add(this.RMale);
             this.Controls.Add(this.txtDob);
@@ -457,5 +477,6 @@
         private System.Windows.Forms.DateTimePicker txtDob;
         private XanderUI.XUIRadio RMale;
         private XanderUI.XUIRadio RFemale;
+        private System.Windows.Forms.Button button3;
     }
 }

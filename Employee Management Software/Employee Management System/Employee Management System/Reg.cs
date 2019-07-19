@@ -128,5 +128,12 @@ namespace Employee_Management_System
                 pictureBox1.ImageLocation = imgLocation;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Employee em = new Employee();
+            this.Hide();
+            em.Show();
+        }
     }
 }
