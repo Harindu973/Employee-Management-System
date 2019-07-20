@@ -63,8 +63,11 @@ namespace Employee_Management_System
 
             // SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
             conn.Open();
+            //var time = DateTime.Now;
             string query = "INSERT INTO EMPDetails values('" + Fname + "','" + Lname + "','" + Desig + "','" + Nic + "','" + Phone + "','" + Dob + "','" + Add + "','" + Gender + "',@images )";
+            //string attquery = "INSERT INTO Attendance values('" + Fname + "','" + Fname + "','1','','')";
             SqlCommand cmd = new SqlCommand(query, conn);
+            //SqlCommand attcmd = new SqlCommand(attquery, conn);
             cmd.Parameters.Add(new SqlParameter("@images", images));
 
            
@@ -75,14 +78,51 @@ namespace Employee_Management_System
             {
                
                 cmd.ExecuteNonQuery();
-                conn.Close();  
+                //attcmd.ExecuteNonQuery();
+                conn.Close();
+                
                 MessageBox.Show("You are now Registerd...!!!");
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Somethig's Going wrong...!  Plz Contact a Developer..." + ex);
+                MessageBox.Show("Something's Going wrong...!  Plz Contact a Developer..." + ex);
             }
 
+
+
+            //Attendance Sheet reg
+
+
+            
+           
+             
+            
+            
+            try
+            {
+                conn.Open();
+                string selqry = "SELECT * FROM EMPDetails where FirstName = '" + Fname + "' ";
+                SqlCommand selcmd = new SqlCommand(selqry, conn);
+                SqlDataReader reader = selcmd.ExecuteReader();
+                reader.Read();
+
+                string EMPID = reader["EMP_ID"].ToString();
+                reader.Close();
+                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','1','','')";
+                SqlCommand attcmd = new SqlCommand(attquery, conn);
+
+                attcmd.ExecuteNonQuery();
+                conn.Close();
+                //MessageBox.Show("You are now Registerd...!!!");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Something's Going wrong in Attendance sheet reg...!  Plz Contact a Developer..." + ex);
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show("" + x);
+            }
 
         }
 

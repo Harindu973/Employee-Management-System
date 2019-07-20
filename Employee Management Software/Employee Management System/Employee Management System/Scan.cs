@@ -88,7 +88,7 @@ namespace Employee_Management_System
 
                             SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
 
-                            string qry = "SELECT FirstName FROM EMPDetails where EMP_ID = '"+QRval+"' ";
+                            string qry = "SELECT * FROM EMPDetails where EMP_ID = '"+QRval+"' ";
                             SqlCommand cmd = new SqlCommand(qry, constring);
 
 
@@ -102,6 +102,7 @@ namespace Employee_Management_System
                             {
                                 var time = DateTime.Now;
                                 string name = reader["FirstName"].ToString();
+                                reader.Close();
                                 constring.Close();
 
                                 try
@@ -112,7 +113,8 @@ namespace Employee_Management_System
                                     cmdattIN.ExecuteNonQuery();
                                     constring.Close();
 
-                                    MessageBox.Show("Dear " + name + ",Your Attendance Is Marked...!!! Press Ok to Finish...");
+
+                                    MessageBox.Show("Dear " + name + ",\nYour Attendance Is Marked...!!! Press Ok to Finish...");
                                 }
                                 catch(SqlException x)
                                 {
@@ -121,7 +123,7 @@ namespace Employee_Management_System
                             }
                             else
                             {
-                                MessageBox.Show("Sorry...!!! You are Not a Employee of us..Try Again...!!!");
+                                MessageBox.Show("Sorry...!!! Invalid QR..Try Again...!!!");
                             }
 
                            /* Home hm = new Home();
