@@ -101,14 +101,14 @@ namespace Employee_Management_System
             try
             {
                 conn.Open();
-                string selqry = "SELECT * FROM EMPDetails where FirstName = '" + Fname + "' ";
+                string selqry = "SELECT * FROM EMPDetails where NIC = '" + Nic + "' ";
                 SqlCommand selcmd = new SqlCommand(selqry, conn);
                 SqlDataReader reader = selcmd.ExecuteReader();
                 reader.Read();
 
                 string EMPID = reader["EMP_ID"].ToString();
                 reader.Close();
-                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','1','','')";
+                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','0','','')";
                 SqlCommand attcmd = new SqlCommand(attquery, conn);
 
                 attcmd.ExecuteNonQuery();
