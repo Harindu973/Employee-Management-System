@@ -39,3 +39,29 @@ C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management 
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.xml
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Reg.resources
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Employee.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\Employee Management System.exe.config
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\Employee Management System.exe
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\Employee Management System.pdb
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.DirectShow.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\MaterialSkin.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.dll
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.xml
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.xml
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\AForge.Video.DirectShow.xml
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.pdb
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.xml
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.pdb
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.xml
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.csprojResolveAssemblyReference.cache
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Employee.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Home.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.LogIn.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Properties.Resources.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Reg.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Scan.resources
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.csproj.GenerateResource.Cache
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.exe
+F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.pdb
