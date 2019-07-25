@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ThirdParty.cs" />
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>

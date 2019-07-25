@@ -75,12 +75,12 @@ namespace Employee_Management_System
                 { 
                     Result res = red.Decode((Bitmap)pictureBox1.Image);
                     
-                    try
-                    {
+                   try
+                   {
                         string dec = res.ToString().Trim();
                         if (dec != string.Empty)
                         {
-                             //timer1.Stop();
+                             timer1.Stop();
 
                             string QRval = dec;
                              
@@ -91,7 +91,7 @@ namespace Employee_Management_System
                             string qry = "SELECT * FROM EMPDetails where EMP_ID = '"+QRval+"' ";
                             SqlCommand cmd = new SqlCommand(qry, constring);
 
-
+                            
 
                             constring.Open();
                             SqlDataReader reader = cmd.ExecuteReader();
@@ -107,18 +107,38 @@ namespace Employee_Management_System
 
                                 try
                                 {
+                                    ThirdParty tp = new ThirdParty();
+                                    bool result = tp.CheckAttend(QRval);
+
                                     constring.Open();
-                                    string attINqry = "INSERT INTO Attendance values('" + QRval + "','" + name + "','1','" + time + "','') ";
-                                    SqlCommand cmdattIN = new SqlCommand(attINqry, constring);
+                                    string attqry = "UPDATE Attendance SET Mark = '1' WHERE EMPID='" + QRval + "'";
+                                    SqlCommand cmdattIN = new SqlCommand(attqry, constring);
                                     cmdattIN.ExecuteNonQuery();
+
+                                    string attqry2 = "UPDATE Attendance SET Attended = 'Present' WHERE EMPID='" + QRval + "'";
+                                    SqlCommand cmdattIN2 = new SqlCommand(attqry2, constring);
+                                    cmdattIN2.ExecuteNonQuery();
                                     constring.Close();
 
+                                    if(result == true)
+                                    {
+                                        MessageBox.Show("Dear " + name + ",\nYour Evening Attendance Is Marked...!!! Press Ok to Finish...");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Dear " + name + ",\nYour Morning Attendance Is Marked...!!! Press Ok to Finish...");
 
-                                    MessageBox.Show("Dear " + name + ",\nYour Attendance Is Marked...!!! Press Ok to Finish...");
+                                    }
+
+                                    timer1.Start();
                                 }
                                 catch(SqlException x)
                                 {
                                     MessageBox.Show("" + x);
+                                }
+                                catch(Exception ex)
+                                {
+                                    MessageBox.Show("" + ex);
                                 }
                             }
                             else
@@ -135,11 +155,12 @@ namespace Employee_Management_System
                     }
                     catch (Exception ex)
                     {
-                        //MessageBox.Show("" + ex);
+                       // MessageBox.Show("" + ex);
                     }
- 
 
+                   
                 }
+                
             }
         }
 

@@ -108,7 +108,7 @@ namespace Employee_Management_System
 
                 string EMPID = reader["EMP_ID"].ToString();
                 reader.Close();
-                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','0','','')";
+                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0')";
                 SqlCommand attcmd = new SqlCommand(attquery, conn);
 
                 attcmd.ExecuteNonQuery();
@@ -161,7 +161,7 @@ namespace Employee_Management_System
         private void xuiButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            dialog.Filter = "All files(*.*)|*.*|jpg files(*.jpg)|*.jpg|png files(*.png)|*.png";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imgLocation = dialog.FileName.ToString();
