@@ -24,7 +24,9 @@ namespace Employee_Management_System
             reader.Read();
 
             string att = reader["Attended"].ToString();
+         
             reader.Close();
+
 
              if (att == "Present   ")
              {
@@ -32,6 +34,7 @@ namespace Employee_Management_System
                 SqlCommand cmdLeave = new SqlCommand(attLeaveqry, constring);
                 cmdLeave.ExecuteNonQuery();
                 result = true;
+                constring.Close();
                 return result;
             }
             else
@@ -39,10 +42,11 @@ namespace Employee_Management_System
                 string attArriveqry = "UPDATE Attendance SET Arrive = '" + time + "' WHERE EMPID='" + QRval + "'";
                 SqlCommand cmdArrive = new SqlCommand(attArriveqry, constring);
                 cmdArrive.ExecuteNonQuery();
+                constring.Close();
                 return result;
             }
-            reader.Close();
-            constring.Close();
+            
+            
 
 
   

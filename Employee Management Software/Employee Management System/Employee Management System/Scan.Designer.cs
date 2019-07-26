@@ -34,7 +34,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.xuiButton1 = new XanderUI.XUIButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.pnlMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMain.BackgroundImage")));
-            this.pnlMain.Controls.Add(this.xuiButton1);
             this.pnlMain.Controls.Add(this.panel2);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pictureBox1);
@@ -90,29 +88,6 @@
             this.pnlMain.Size = new System.Drawing.Size(671, 578);
             this.pnlMain.TabIndex = 0;
             this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
-            // 
-            // xuiButton1
-            // 
-            this.xuiButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.xuiButton1.ButtonImage = ((System.Drawing.Image)(resources.GetObject("xuiButton1.ButtonImage")));
-            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.xuiButton1.ButtonText = "Home";
-            this.xuiButton1.ClickBackColor = System.Drawing.Color.Black;
-            this.xuiButton1.ClickTextColor = System.Drawing.Color.Black;
-            this.xuiButton1.CornerRadius = 5;
-            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
-            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(496, 507);
-            this.xuiButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.xuiButton1.Name = "xuiButton1";
-            this.xuiButton1.Size = new System.Drawing.Size(135, 49);
-            this.xuiButton1.TabIndex = 7;
-            this.xuiButton1.TextColor = System.Drawing.Color.DarkGray;
-            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton1.Click += new System.EventHandler(this.xuiButton1_Click);
             // 
             // panel2
             // 
@@ -212,7 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
-        private XanderUI.XUIButton xuiButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

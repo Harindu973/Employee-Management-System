@@ -122,11 +122,11 @@ namespace Employee_Management_System
 
                                     if(result == true)
                                     {
-                                        MessageBox.Show("Dear " + name + ",\nYour Evening Attendance Is Marked...!!! Press Ok to Finish...");
+                                        MessageBox.Show("Good Evening " + name + "!!!\nYour Leaving time Marked Successfully...!!! \nPress Ok to Finish...");
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Dear " + name + ",\nYour Morning Attendance Is Marked...!!! Press Ok to Finish...");
+                                        MessageBox.Show("Good Morning " + name + "  m !!!\nYour Arriving time Marked Successfully...!!! \nPress Ok to Finish...");
 
                                     }
 
@@ -143,7 +143,8 @@ namespace Employee_Management_System
                             }
                             else
                             {
-                                MessageBox.Show("Sorry...!!! Invalid QR..Try Again...!!!");
+                                MessageBox.Show("Sorry...!!! Invalid Barcode...Try Again...!!!");
+                                timer1.Start();
                             }
 
                            /* Home hm = new Home();
