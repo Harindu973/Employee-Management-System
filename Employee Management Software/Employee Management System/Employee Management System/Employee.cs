@@ -81,14 +81,11 @@ namespace Employee_Management_System
             //Ateendance table
             SqlDataAdapter da = new SqlDataAdapter(qry, constring);
             DataSet ds = new DataSet();
-
+            
+            //image retrive
             da.Fill(ds, "Attendance");
             DGV1.DataSource = ds.Tables["Attendance"];
 
-
-            //Image retrive
-           // con = new SqlConnection("Data Source=MCNDESKTOP03;Initial Catalog=pulkit;User ID=sa;Password=wintellect@123");
-            //con.Open();
             cmd = new SqlCommand("SELECT * FROM EMPDetails where EMP_ID = '" + key + "' ", constring);
             SqlDataAdapter daa = new SqlDataAdapter(cmd);
             DataSet dss = new DataSet();
@@ -111,7 +108,8 @@ namespace Employee_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Scan sc = new Scan();
+            ScanS sc = new ScanS();
+            this.Hide();
             sc.Show();
           
             

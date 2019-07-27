@@ -158,6 +158,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(132, 30);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.Text = "100";
             this.txtSearch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtPhone
@@ -198,7 +199,7 @@
             this.txtGender.Location = new System.Drawing.Point(150, 534);
             this.txtGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(132, 27);
+            this.txtGender.Size = new System.Drawing.Size(109, 27);
             this.txtGender.TabIndex = 17;
             // 
             // txtDesig
@@ -341,12 +342,14 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(319, 45);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(50);
             this.button1.Size = new System.Drawing.Size(43, 38);
             this.button1.TabIndex = 26;
-            this.button1.Text = "QR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -363,6 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -397,6 +401,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "D.N.Weerathunga (Pvt) Ltd.";
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();

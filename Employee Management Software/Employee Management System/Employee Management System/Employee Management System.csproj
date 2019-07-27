@@ -68,6 +68,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScanS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanS.Designer.cs">
+      <DependentUpon>ScanS.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThirdParty.cs" />
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scan.resx">
       <DependentUpon>Scan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanS.resx">
+      <DependentUpon>ScanS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

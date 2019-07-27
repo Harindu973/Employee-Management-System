@@ -65,3 +65,4 @@ F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Ma
 F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.csproj.GenerateResource.Cache
 F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.exe
 F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.pdb
+C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.ScanS.resources
