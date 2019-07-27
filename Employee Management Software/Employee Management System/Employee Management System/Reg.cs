@@ -108,7 +108,7 @@ namespace Employee_Management_System
 
                 string EMPID = reader["EMP_ID"].ToString();
                 reader.Close();
-                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0')";
+                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0')";
                 SqlCommand attcmd = new SqlCommand(attquery, conn);
 
                 attcmd.ExecuteNonQuery();

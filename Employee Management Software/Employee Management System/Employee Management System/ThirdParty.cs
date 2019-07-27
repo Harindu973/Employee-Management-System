@@ -24,7 +24,11 @@ namespace Employee_Management_System
             reader.Read();
 
             string att = reader["Attended"].ToString();
-         
+            var arriveT = Convert.ToDateTime(reader["Arrive"]);
+            var leaveT = Convert.ToDateTime(reader["Leave"]);
+
+            var timespan = leaveT.Subtract(arriveT).TotalMinutes;
+           
             reader.Close();
 
 
@@ -33,9 +37,38 @@ namespace Employee_Management_System
                 string attLeaveqry = "UPDATE Attendance SET Leave = '" + time + "' WHERE EMPID='" + QRval + "'";
                 SqlCommand cmdLeave = new SqlCommand(attLeaveqry, constring);
                 cmdLeave.ExecuteNonQuery();
+
+                string timespanqry = "UPDATE Attendance SET Minutes = '" + timespan + "' WHERE EMPID='" + QRval + "'";
+                SqlCommand cmdtimespan = new SqlCommand(timespanqry, constring);
+                cmdtimespan.ExecuteNonQuery();
+
+                if (timespan <= 450)
+                {
+                    string slqry = "UPDATE Attendance SET ShortL = '1' WHERE EMPID='" + QRval + "'";
+                    SqlCommand cmdsl = new SqlCommand(slqry, constring);
+                    cmdsl.ExecuteNonQuery();
+                }
+
+                if(timespan > 480)
+                {
+                    var Hours = (timespan / 60)-8;
+                    //int intHours = int.Parse(Hours.ToString());
+
+                    string otqry = "UPDATE Attendance SET OT = '" + Hours + "' WHERE EMPID='" + QRval + "'";
+                    SqlCommand cmdot = new SqlCommand(otqry, constring);
+                    cmdot.ExecuteNonQuery();
+                }
+               
+
+
+
+
                 result = true;
                 constring.Close();
+                
+                
                 return result;
+
             }
             else
             {
