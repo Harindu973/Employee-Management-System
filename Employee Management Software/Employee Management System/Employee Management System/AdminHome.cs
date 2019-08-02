@@ -10,26 +10,15 @@ using System.Windows.Forms;
 
 namespace Employee_Management_System
 {
-    public partial class Home: Form
+    public partial class AdminHome : Form
     {
-        public Home()
+        public AdminHome()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-             Scan sc = new Scan();
-             this.Hide();
-             sc.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            LogIn lg = new LogIn();
-            this.Hide();
-            lg.Show();
 
         }
     }

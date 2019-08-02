@@ -79,13 +79,17 @@ namespace Employee_Management_System
                
                 cmd.ExecuteNonQuery();
                 //attcmd.ExecuteNonQuery();
-                conn.Close();
+                
                 
                 MessageBox.Show("You are now Registerd...!!!");
             }
             catch (SqlException ex)
             {
                 MessageBox.Show("Something's Going wrong...!  Plz Contact a Developer..." + ex);
+            }
+            finally
+            {
+                conn.Close();
             }
 
 
@@ -108,12 +112,14 @@ namespace Employee_Management_System
 
                 string EMPID = reader["EMP_ID"].ToString();
                 reader.Close();
-                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0')";
+
+                string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0','0')";
+
                 SqlCommand attcmd = new SqlCommand(attquery, conn);
 
                 attcmd.ExecuteNonQuery();
                 conn.Close();
-                //MessageBox.Show("You are now Registerd...!!!");
+                
             }
             catch (SqlException ex)
             {
@@ -123,7 +129,52 @@ namespace Employee_Management_System
             {
                 MessageBox.Show("" + x);
             }
+            finally
+            {
+                conn.Close();
+            }
 
+
+
+
+
+            //Attendance Monthy table reg
+
+            try
+            {
+                conn.Open();
+                string selqry = "SELECT * FROM EMPDetails where NIC = '" + Nic + "' ";
+                SqlCommand selcmd = new SqlCommand(selqry, conn);
+                SqlDataReader reader = selcmd.ExecuteReader();
+                reader.Read();
+
+                string EMPID = reader["EMP_ID"].ToString();
+                reader.Close();
+
+                //string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0')";
+                string attmonthquery = "INSERT INTO MonthlyAtt values('" + EMPID + "','" + Fname + "','" + Lname + "','" + Nic + "','0','0','0','0')";
+
+                //SqlCommand attcmd = new SqlCommand(attquery, conn);
+                SqlCommand attmonthcmd = new SqlCommand(attmonthquery, conn);
+
+                //attcmd.ExecuteNonQuery();
+                attmonthcmd.ExecuteNonQuery();
+                conn.Close();
+                //MessageBox.Show("You are now Registerd...!!!");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Something's Going wrong in Monthly Attendance sheet reg...!  Plz Contact a Developer..." + ex);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("" + x);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
