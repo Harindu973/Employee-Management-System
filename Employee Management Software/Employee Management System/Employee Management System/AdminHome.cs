@@ -13,6 +13,16 @@ namespace Employee_Management_System
 {
     public partial class AdminHome : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+
         public AdminHome()
         {
             InitializeComponent();
@@ -20,7 +30,13 @@ namespace Employee_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
+           
+
+
+        }
+
+        private void xuiButton3_Click(object sender, EventArgs e)
+        {
 
             //Attendance table variables
             int attno;
@@ -28,9 +44,9 @@ namespace Employee_Management_System
             string Attended;
             int attShortL;
             double attOT = 0;
-            
 
-           //MonthlyAtt table variables
+
+            //MonthlyAtt table variables
             int present;
             int absent;
             double OT;
@@ -51,7 +67,7 @@ namespace Employee_Management_System
 
 
 
-            for (attno = 0;attno<100;attno++)
+            for (attno = 0; attno < 100; attno++)
             {
 
                 string selqry = "SELECT * FROM Attendance where AttNO = '" + attno + "' ";
@@ -80,7 +96,7 @@ namespace Employee_Management_System
 
                     ra.Read();
                     //MonthlyAtt
-                   
+
                     present = Convert.ToInt32(ra["PresentDays"]);
                     absent = Convert.ToInt32(ra["AbsentDays"]);
                     OT = Convert.ToDouble(ra["OT"]);
@@ -88,7 +104,7 @@ namespace Employee_Management_System
 
                     ra.Close();
 
-                    if(Attended == "Present   ")   
+                    if (Attended == "Present   ")
                     {
                         ExPresent = 1;
                     }
@@ -102,20 +118,20 @@ namespace Employee_Management_System
                     InOT = attOT + OT;
                     InShortLeaves = attShortL + ShortL;
 
-                    string attLeaveqry = "UPDATE MonthlyAtt SET PresentDays = '" + Inpresent + "', AbsentDays = '"+ Inabsent + "', OT = '" + InOT + "', ShortLeaves = '" + InShortLeaves + "'  WHERE EMPID='" + EmpID + "'";
+                    string attLeaveqry = "UPDATE MonthlyAtt SET PresentDays = '" + Inpresent + "', AbsentDays = '" + Inabsent + "', OT = '" + InOT + "', ShortLeaves = '" + InShortLeaves + "'  WHERE EMPID='" + EmpID + "'";
                     SqlCommand cmdLeave = new SqlCommand(attLeaveqry, constring);
                     cmdLeave.ExecuteNonQuery();
 
                     //constring.Close();
 
-                    
+
 
                 }
-                
-             reader.Close();
-             
-                
-                
+
+                reader.Close();
+
+
+
 
 
             }
@@ -131,12 +147,58 @@ namespace Employee_Management_System
             }
 
 
-             MessageBox.Show("Attendance Collected Sucssesfully and Ready to Next Day...!!!");
+            MessageBox.Show("Attendance Collected Sucssesfully and Ready to Next Day...!!!");
 
 
             constring.Close();
+        }
 
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            string qry = "SELECT * From MonthlyAtt";
+            SqlDataAdapter da = new SqlDataAdapter(qry, constring);
+            DataSet ds = new DataSet();
 
+            da.Fill(ds, "MonthlyAtt");
+            dataGridView1.DataSource = ds.Tables["MonthlyAtt"];
+
+            constring.Close();
+        }
+
+        private void xuiButton2_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            string qry = "SELECT * From Attendance";
+            SqlDataAdapter da = new SqlDataAdapter(qry, constring);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Attendance");
+            dataGridView1.DataSource = ds.Tables["Attendance"];
+
+            constring.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void xuiButton4_Click(object sender, EventArgs e)
+        {
+           
+            Employee em = new Employee();
+            em.Show();
+            this.Hide();
+        }
+
+        private void PnlMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
