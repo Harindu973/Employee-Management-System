@@ -121,5 +121,12 @@ namespace Employee_Management_System
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AdminHome ad = new AdminHome();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

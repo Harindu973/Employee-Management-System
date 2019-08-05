@@ -39,7 +39,7 @@ namespace Employee_Management_System
         {
             string Fname = txtFname.Text;
             string Lname = txtLname.Text;
-            string Desig = txtDesig.Text;
+            string Desig = comboDesig.Text;
             string Nic = txtNic.Text;
             string Phone = txtPhone.Text;
             string Dob = txtDob.Text;
@@ -225,6 +225,22 @@ namespace Employee_Management_System
             Employee em = new Employee();
             this.Hide();
             em.Show();
+        }
+
+        private void comboDesig_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboDesig.DisplayMember = "Text";
+            comboDesig.ValueMember = "Value";
+
+            var items = new[] {
+            new { Text = "report A", Value = "reportA" },
+            new { Text = "report B", Value = "reportB" },
+            new { Text = "report C", Value = "reportC" },
+            new { Text = "report D", Value = "reportD" },
+            new { Text = "report E", Value = "reportE" }
+};
+
+            comboDesig.DataSource = items;
         }
     }
 }

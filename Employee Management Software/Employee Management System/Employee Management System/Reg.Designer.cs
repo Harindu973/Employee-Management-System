@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtLname = new System.Windows.Forms.TextBox();
             this.txtFname = new System.Windows.Forms.TextBox();
-            this.txtDesig = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.RMale = new XanderUI.XUIRadio();
             this.RFemale = new XanderUI.XUIRadio();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboDesig = new System.Windows.Forms.ComboBox();
             this.PnlMove.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -182,14 +182,6 @@
             this.txtFname.Size = new System.Drawing.Size(236, 22);
             this.txtFname.TabIndex = 0;
             // 
-            // txtDesig
-            // 
-            this.txtDesig.Location = new System.Drawing.Point(203, 286);
-            this.txtDesig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDesig.Name = "txtDesig";
-            this.txtDesig.Size = new System.Drawing.Size(236, 22);
-            this.txtDesig.TabIndex = 2;
-            // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(203, 380);
@@ -286,7 +278,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(347, 614);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.pictureBox1.Location = new System.Drawing.Point(401, 586);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 91);
@@ -391,12 +384,22 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // comboDesig
+            // 
+            this.comboDesig.FormattingEnabled = true;
+            this.comboDesig.Location = new System.Drawing.Point(203, 285);
+            this.comboDesig.Name = "comboDesig";
+            this.comboDesig.Size = new System.Drawing.Size(236, 24);
+            this.comboDesig.TabIndex = 23;
+            this.comboDesig.SelectedIndexChanged += new System.EventHandler(this.comboDesig_SelectedIndexChanged);
+            // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(533, 782);
+            this.Controls.Add(this.comboDesig);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.RFemale);
             this.Controls.Add(this.RMale);
@@ -419,7 +422,6 @@
             this.Controls.Add(this.txtAdd);
             this.Controls.Add(this.txtNic);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtDesig);
             this.Controls.Add(this.txtLname);
             this.Controls.Add(this.txtFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -448,7 +450,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLname;
         private System.Windows.Forms.TextBox txtFname;
-        private System.Windows.Forms.TextBox txtDesig;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -466,5 +467,6 @@
         private XanderUI.XUIRadio RMale;
         private XanderUI.XUIRadio RFemale;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboDesig;
     }
 }

@@ -26,6 +26,8 @@ namespace Employee_Management_System
             string att = reader["Attended"].ToString();
             var arriveT = Convert.ToDateTime(reader["Arrive"]);
             var leaveT = Convert.ToDateTime(reader["Leave"]);
+            //var leavT = Convert.ToInt32(reader["Leave"]);
+
 
             var timespan = leaveT.Subtract(arriveT).TotalMinutes;
            
