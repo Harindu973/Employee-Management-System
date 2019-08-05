@@ -68,6 +68,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary.Designer.cs">
+      <DependentUpon>Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanS.Designer.cs">
+      <DependentUpon>ScanS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty.cs" />
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Encapsulation.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
