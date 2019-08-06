@@ -15,6 +15,7 @@ namespace Employee_Management_System
 {
     public partial class Reg : Form
     {
+        string ValueOfCombo;
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\C# Databases\EMP.mdf';Integrated Security=True;Connect Timeout=30");
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -39,7 +40,7 @@ namespace Employee_Management_System
         {
             string Fname = txtFname.Text;
             string Lname = txtLname.Text;
-            string Desig = comboDesig.Text;
+            string Desig = ValueOfCombo;
             string Nic = txtNic.Text;
             string Phone = txtPhone.Text;
             string Dob = txtDob.Text;
@@ -53,6 +54,8 @@ namespace Employee_Management_System
             {
                 Gender = "Female";
             }
+
+
             
 
             byte[] images = null;
@@ -229,18 +232,9 @@ namespace Employee_Management_System
 
         private void comboDesig_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboDesig.DisplayMember = "Text";
-            comboDesig.ValueMember = "Value";
 
-            var items = new[] {
-            new { Text = "report A", Value = "reportA" },
-            new { Text = "report B", Value = "reportB" },
-            new { Text = "report C", Value = "reportC" },
-            new { Text = "report D", Value = "reportD" },
-            new { Text = "report E", Value = "reportE" }
-};
+           ValueOfCombo = comboDesig.Text;
 
-            comboDesig.DataSource = items;
         }
     }
 }
