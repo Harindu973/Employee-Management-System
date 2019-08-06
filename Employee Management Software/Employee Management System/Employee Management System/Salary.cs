@@ -62,28 +62,6 @@ namespace Employee_Management_System
             }
 
 
-
-
-            //Ateendance table
-            SqlDataAdapter da = new SqlDataAdapter(qry, constring);
-            DataSet ds = new DataSet();
-
-
-            da.Fill(ds, "MonthlyAtt");
-            DGV1.DataSource = ds.Tables["MonthlyAtt"];
-
-
-            //image retrive
-            cmd = new SqlCommand("SELECT * FROM EMPDetails where EMP_ID = '" + key + "' ", constring);
-            SqlDataAdapter daa = new SqlDataAdapter(cmd);
-            DataSet dss = new DataSet();
-            daa.Fill(dss);
-            if (dss.Tables[0].Rows.Count > 0)
-            {
-                MemoryStream ms = new MemoryStream((byte[])dss.Tables[0].Rows[0]["Photo"]);
-                pictureBox1.Image = new Bitmap(ms);
-            }
-
             constring.Close();
         }
 
