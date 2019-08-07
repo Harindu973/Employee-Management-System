@@ -67,6 +67,7 @@ F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Ma
 F:\Dgree\First Year\Third semester\SYSTEM\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.pdb
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.ScanS.resources
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.AdminHome.resources
+<<<<<<< HEAD
 C:\Users\Asus\Desktop\C# Project\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.Salary.resources
 D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.csprojAssemblyReference.cache
 D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee_Management_System.AdminHome.resources
@@ -100,3 +101,5 @@ D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee M
 D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.pdb
 D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\bin\Debug\zxing.presentation.xml
 D:\Garage\GIT\Employee-Management-System\Employee Management Software\Employee Management System\Employee Management System\obj\Debug\Employee Management System.csproj.CopyComplete
+=======
+>>>>>>> parent of 6d49824... Merge branch 'master' of https://github.com/Harindu973/Employee-Management-System

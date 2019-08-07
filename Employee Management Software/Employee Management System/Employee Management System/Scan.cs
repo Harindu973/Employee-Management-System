@@ -196,8 +196,8 @@ namespace Employee_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            this.Close();
+    
+            Application.Exit();
             
             
 
@@ -224,7 +224,9 @@ namespace Employee_Management_System
 
         private void xuiButton1_Click(object sender, EventArgs e)
         {
-     
+            Home hm = new Home();
+            this.Hide();
+            hm.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

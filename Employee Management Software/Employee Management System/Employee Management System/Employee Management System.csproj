@@ -151,9 +151,6 @@
     <EmbeddedResource Include="Reg.resx">
       <DependentUpon>Reg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Salary.resx">
-      <DependentUpon>Salary.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Scan.resx">
       <DependentUpon>Scan.cs</DependentUpon>
     </EmbeddedResource>

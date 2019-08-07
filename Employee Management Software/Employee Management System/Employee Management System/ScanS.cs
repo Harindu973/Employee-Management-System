@@ -72,19 +72,16 @@ namespace Employee_Management_System
 
                             string QRval = dec;
 
-                             //MessageBox.Show("" + QRval);
+                             MessageBox.Show("" + QRval);
 
 
 
                             Employee em = new Employee();
-                           
-                            
+                            this.Hide();
                             em.Show();
-                            this.Close();
-                            
+                        
 
-                            em.txtSearch.Text=QRval.ToString();
-
+                              em.txtSearch.Text=QRval.ToString();
 
                         }
                     }
@@ -120,9 +117,7 @@ namespace Employee_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Employee em = new Employee();
-            em.Show();
-            this.Close();
+            Application.Exit();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

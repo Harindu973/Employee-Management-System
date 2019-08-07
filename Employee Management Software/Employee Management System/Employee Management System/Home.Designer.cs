@@ -33,11 +33,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.PnlMove = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.PnlMove.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,11 +63,11 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(318, 402);
+            this.button2.Location = new System.Drawing.Point(358, 402);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(181, 54);
+            this.button2.Size = new System.Drawing.Size(135, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "       LOGIN";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,17 +85,6 @@
             this.PnlMove.Name = "PnlMove";
             this.PnlMove.Size = new System.Drawing.Size(511, 60);
             this.PnlMove.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.label3.Location = new System.Drawing.Point(7, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(282, 21);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Employee Management System ";
             // 
             // button3
             // 
@@ -146,6 +135,17 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "v 1.0";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.label3.Location = new System.Drawing.Point(7, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(282, 21);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Employee Management System ";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,6 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.PnlMove.ResumeLayout(false);
             this.PnlMove.PerformLayout();

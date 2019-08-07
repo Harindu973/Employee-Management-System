@@ -387,16 +387,6 @@
             // comboDesig
             // 
             this.comboDesig.FormattingEnabled = true;
-            this.comboDesig.Items.AddRange(new object[] {
-            "Manager",
-            "Accountan",
-            "Senior Employee",
-            "Junior Employee",
-            "Unpermanent Employee",
-            "Temporary Employee",
-            "Driver",
-            "Security",
-            "Assistant Manager"});
             this.comboDesig.Location = new System.Drawing.Point(203, 285);
             this.comboDesig.Name = "comboDesig";
             this.comboDesig.Size = new System.Drawing.Size(236, 24);

@@ -21,7 +21,7 @@ namespace Employee_Management_System
         {
 
              Scan sc = new Scan();
-             
+             this.Hide();
              sc.Show();
         }
 
